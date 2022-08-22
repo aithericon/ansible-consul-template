@@ -3,9 +3,12 @@
 
 - name: Include user and group settings
   ansible.builtin.import_tasks: user_group.yml
+  tags: installation
 
 - name: Include consul-template installation
   ansible.builtin.import_tasks: install.yml
+  tags: always
 
 - name: Include service installation
   ansible.builtin.import_tasks: service.yml
+  tags: installation
