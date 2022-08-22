@@ -7,7 +7,7 @@
 
 - name: Include consul-template installation
   ansible.builtin.import_tasks: install.yml
-  tags: installation, configuration
+  # tags: installation, configuration
 
 - name: Include service installation
   ansible.builtin.import_tasks: service.yml
